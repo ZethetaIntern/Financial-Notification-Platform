@@ -1,4 +1,4 @@
-# Financial Notification Platform
+## Financial Notification Platform
 
 Enterprise-grade, event-driven financial notification system with multi-channel delivery, compliance enforcement, and real-time analytics.
 
@@ -6,21 +6,35 @@ Enterprise-grade, event-driven financial notification system with multi-channel 
 
 ## Features
 
-- **25+ Financial Event Types** — transactions, payments, loans, investments, security, KYC, offers
-- **5 Notification Channels** — SMS (Twilio), Email (SendGrid), WhatsApp (Twilio), Push (Firebase), In-App
-- **TRAI DND Compliance** — automatic DND registry check with 24h cache
-- **Quiet Hours** — configurable per user, bypassed for critical events
-- **Frequency Capping** — hourly / daily / weekly limits per user per channel
-- **Retry Engine** — exponential backoff with configurable max retries and Dead Letter Queue
-- **Delivery Tracking** — real-time delivery receipts via provider webhooks
-- **Analytics Dashboard** — delivery rates, skip analysis, channel performance, daily trends
-- **Localization** — English and Hindi templates
-- **Personalization** — engagement-based channel selection and context enrichment
-- **JWT Authentication** — access + refresh tokens
-- **RBAC** — superadmin / admin / manager / analyst / user roles
-- **Idempotency** — SHA-256 keyed deduplication
-- **Structured Logging** — JSON structured logs via structlog
-- **Rate Limiting** — per-IP per-minute and per-hour limits via Redis
+25+ Financial Event Types** — transactions, payments, loans, investments, security, KYC, offers
+
+5 Notification Channels** — SMS (Twilio), Email (SendGrid), WhatsApp (Twilio), Push (Firebase), In-App
+
+TRAI DND Compliance** — automatic DND registry check with 24h cache
+
+Quiet Hours** — configurable per user, bypassed for critical events
+
+Frequency Capping** — hourly / daily / weekly limits per user per channel
+
+Retry Engine** — exponential backoff with configurable max retries and Dead Letter Queue
+
+Delivery Tracking** — real-time delivery receipts via provider webhooks
+
+Analytics Dashboard** — delivery rates, skip analysis, channel performance, daily trends
+
+Localization** — English and Hindi templates
+
+Personalization** — engagement-based channel selection and context enrichment
+
+JWT Authentication** — access + refresh tokens
+
+RBAC** — superadmin / admin / manager / analyst / user roles
+
+Idempotency** — SHA-256 keyed deduplication
+
+Structured Logging** — JSON structured logs via structlog
+
+Rate Limiting** — per-IP per-minute and per-hour limits via Redis
 
 ---
 
