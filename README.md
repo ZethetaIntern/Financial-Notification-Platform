@@ -4,34 +4,6 @@ Enterprise-grade, event-driven financial notification system with multi-channel 
 
 ---
 
-## Architecture
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        FastAPI (API Layer)                       │
-│  /auth  /users  /notifications  /preferences  /templates        │
-│  /analytics  /device-tokens  /admin  /webhooks                  │
-└────────────────────┬────────────────────────────────────────────┘
-                     │ Kafka Events
-                     ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                     Kafka (Message Broker)                       │
-│  notification.events → notification.status → notification.dlq   │
-│  notification.retry  → notification.analytics                   │
-└────────────────────┬────────────────────────────────────────────┘
-                     │ Consumed by
-                     ▼
-┌──────────────────────────────────────────────────────────────────┐
-│               Kafka Consumer + Celery Workers                    │
-│  NotificationFactory → ComplianceService → FrequencyCapService  │
-│  → NotificationDispatcher → Channel Routers                     │
-└────┬──────────┬──────────┬──────────┬──────────┬───────────────-┘
-     │          │          │          │          │
-     ▼          ▼          ▼          ▼          ▼
-   SMS       Email     WhatsApp    Push       In-App
- (Twilio) (SendGrid)  (Twilio)  (Firebase)    (DB)
-```
-
 ## Features
 
 - **25+ Financial Event Types** — transactions, payments, loans, investments, security, KYC, offers
